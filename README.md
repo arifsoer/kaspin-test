@@ -26,7 +26,7 @@ this project need postgreSQL for save data user and token, also using redis for 
 
 > yarn dev
 
-2.  access swagger doc on http://localhost/docs
+2.  access swagger doc on http://localhost:3333/docs, you may change localhost with the ip based on your local machine
 3.  login using default username and password on /api/v1/auth/login
 
 > username : admin1@admin.com
