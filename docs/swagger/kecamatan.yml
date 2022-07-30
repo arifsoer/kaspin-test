@@ -1,0 +1,71 @@
+/api/v1/kecamatan:
+  get:
+    tags:
+      - Kecamatan
+    security:
+      - bearerAuth: []
+    description: Get Datas Kecamatan
+    parameters:
+      - in: query
+        name: kota_id
+        schema:
+          type: string
+          description: id kota
+    produces:
+      - application/json
+    responses:
+      200:
+        description: Success getting data kecamatan by query
+        content:
+          application/json:
+            schema:
+              properties:
+                status:
+                  type: string
+                  example: data
+                data:
+                  type: array
+                  items:
+                    properties:
+                      id:
+                        type: string
+                      kota_id:
+                        type: string
+                      nama:
+                        type: string
+
+/api/v1/kecamatan/{id}:
+  get:
+    tags:
+      - Kecamatan
+    security:
+      - bearerAuth: []
+    description: Get Data Kecamatan
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+          required: true
+          description: Kecamatan id
+    produces:
+      - application/json
+    responses:
+      200:
+        description: Success geting data kecamatan from id
+        content:
+          application/json:
+            schema:
+              properties:
+                status:
+                  type: string
+                  example: data
+                data:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    kota_id:
+                      type: string
+                    nama:
+                      type: string

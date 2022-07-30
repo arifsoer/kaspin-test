@@ -21,6 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 import './api/auth'
+import './api/address'
 
 Route.get('*', async () => {
   return 'Welcome to Restfull Api'
